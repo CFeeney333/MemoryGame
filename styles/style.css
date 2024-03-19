@@ -1,0 +1,28 @@
+:root {
+    --primary-color-dark: #c4b6a2;
+    --primary-color-med: #d6cdc0;
+    --primary-color-light: #fdfdfd;
+
+    --accent-color: #fdfbe9;
+
+    --secondary-color-dark: #3a5739;
+    --seondary-color-med: #67ba60;
+    --secondary-color-light: #7aa376;
+
+    --complementary-color-dark: #910E0E;
+    --complementary-color-med: #CC3131;
+    --complementary-color-light: #BB6060;
+
+
+    --text-color-dark: black;
+    --text-color-light: var(--primary-color-light);
+
+    --fw-bold: 800;
+    --fw-semi-bold: 550;
+    --fw-light: 300;
+
+    --fs-large: 3em;
+    --fs-med: 2em;
+    --fs-small: 1em;
+    --fs-tiny: .75em;
+}
