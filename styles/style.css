@@ -301,11 +301,14 @@ footer {
     display: flex;
     align-items: center;
 
-    padding-left: 10%;
     background-color: var(--primary-color-dark);
     height: 4em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 h3 {
+    padding-left: 10%;
     font-weight: bolder;
 }
