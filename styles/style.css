@@ -129,3 +129,33 @@ table {
 body {
     font-family: kanit, sans-serif;
 }
+
+#header-container {
+    background-color: var(--accent-color);
+    height: 2em;
+    padding: .5em 10%;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+#header-title {
+    font-weight: bolder;
+    font-size: var(--fs-large);
+}
+
+#date-container {
+    display: flex;
+    gap: .2em;
+}
+
+#date-title {
+    font-weight: bold;
+    font-size: var(--fs-med);
+}
+
+#date-content {
+    font-weight: normal;
+    font-size: var(--fs-med);
+}
