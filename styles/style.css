@@ -68,27 +68,27 @@ table {
 
 
     --fs-large: 1.5em;
-    --fs-med: 1.2em;
+    --fs-med: 1.3em;
     --fs-small: 1em;
     --fs-tiny: .75em;
 }
 
 @font-face {
     font-family: kanit;
-    src: url(../fonts/Kanit/Kanit-Black.ttf );
-    font-weight: auto;
+    src: url(../fonts/Kanit/Kanit-Black.ttf);
+    font-weight: bold;
 }
 
 @font-face {
     font-family: kanit;
     src: url(../fonts/Kanit/Kanit-Bold.ttf);
-    font-weight: auto;
+    font-weight: bold;
 }
 
 @font-face {
     font-family: kanit;
     src: url(../fonts/Kanit/Kanit-ExtraBold.ttf);
-    font-weight: auto;
+    font-weight: bold;
 }
 
 @font-face {
@@ -108,6 +108,7 @@ table {
     src: url(../fonts/Kanit/Kanit-Medium.ttf);
     font-weight: auto;
 }
+
 @font-face {
     font-family: kanit;
     src: url(../fonts/Kanit/Kanit-Regular.ttf);
@@ -117,7 +118,7 @@ table {
 @font-face {
     font-family: kanit;
     src: url(../fonts/kanit/Kanit-SemiBold.ttf);
-    font-weight: auto;
+    font-weight: bold;
 }
 
 @font-face {
