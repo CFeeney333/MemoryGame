@@ -67,8 +67,8 @@ table {
     --text-color-light: var(--primary-color-light);
 
 
-    --fs-large: 3em;
-    --fs-med: 2em;
+    --fs-large: 1.5em;
+    --fs-med: 1.2em;
     --fs-small: 1em;
     --fs-tiny: .75em;
 }
