@@ -166,3 +166,133 @@ body {
     font-weight: normal;
     font-size: var(--fs-med);
 }
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 4em 10%;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+
+    background-color: var(--primary-color-dark);
+    flex: 0 .5 640px;
+    height: 360px;
+    padding: 1.5em;
+    border-radius: 12px;
+}
+
+#game-board {
+    display: grid;
+    gap: .3em;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    flex: 0 0 auto;
+    aspect-ratio: 1;
+    border-radius: 6px;
+    padding: .2em;
+
+    background-color: var(--primary-color-light);
+}
+
+.tile {
+    border-radius: 3px;
+    text-align: center;
+
+    background-color: var(--secondary-color-light);
+}
+
+#info-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    flex: 1 1 auto;
+    border-radius: 6px;
+    padding: 1.5em;
+    border: .3em solid white;
+
+    background-color: var(--primary-color-med);
+}
+
+#stats-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: .5em;
+
+    background-color: var(--accent-color);
+    border-radius: 3px;
+    padding: 1em .5em;
+}
+
+#stats-heading {
+    font-size: var(--fs-med);
+    font-weight: bolder;
+    color: var(--secondary-color-dark);
+    align-self: center;
+}
+
+#stats-content {
+    display: flex;
+    flex-direction: column;
+    gap: .2em;
+}
+
+.pair {
+    display: flex;
+    gap: .5em;
+
+    font-size: var(--fs-small);
+}
+
+.pair > .key {
+    flex: 1 1 0;
+    text-align: right;
+    font-weight: bolder;
+    color: var(--complementary-color-dark);
+    font-size: var(--fs-small);
+}
+
+.pair > .value {
+    flex: 1 1 0;
+    text-align: left;
+    font-weight: bold;
+    color: var(--complementary-color-light);
+    font-size: var(--fs-small);
+
+}
+
+#button-panel {
+    display: flex;
+    gap: 1em;
+
+    background-color: var(--accent-color);
+    border-radius: 3px;
+    padding: .5em;
+}
+
+button {
+    flex: 1 1 0;
+    font-size: var(--fs-small);
+    font-weight: bold;
+    padding: .5em 0;
+    border-radius: 3px;
+    color: var(--accent-color);
+}
+
+#reveal {
+    background-color: var(--complementary-color-light);
+    border: 2px solid var(--complementary-color-dark);
+}
+
+#new-game {
+    background-color: var(--secondary-color-light);
+    border: 2px solid var(--secondary-color-dark);
+}
