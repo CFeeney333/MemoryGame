@@ -1,4 +1,5 @@
 const gameBoard = document.getElementById('game-board');
+let first = null, second = null;
 
 const createBoard = () => {
     const symbols = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'white', 'black'];
@@ -15,7 +16,19 @@ const createBoard = () => {
             hide(symbol);
 
             symbol.addEventListener('click', (e) => {
-                e.target.classList.toggle('hidden');
+                if (first === null) {
+                    first = e.target;
+                    show(first);
+                } else if (second === null) {
+                    second = e.target
+                    show(second);
+                    setTimeout(() => {
+                        hide(first);
+                        hide(second);
+                        first = null;
+                        second = null;
+                    }, 1200);
+                }
             });
 
             tile.appendChild(symbol);
@@ -49,7 +62,7 @@ const hide = (e) => {
     }
 }
 
-const reveal = (e) => {
+const show = (e) => {
     if (e.classList.contains('hidden')) {
         e.classList.remove('hidden');
     }
