@@ -355,6 +355,12 @@ h3 {
 .black {
     background-color: black;
 }
+
+.symbol {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
 .hidden {
     opacity: 0;
 }
