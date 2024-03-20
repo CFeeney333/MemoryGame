@@ -2,6 +2,8 @@ const gameBoard = document.getElementById('game-board');
 let first = null, second = null;
 
 const createBoard = () => {
+    first = null;
+    second = null;
     const symbols = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'white', 'black'];
     const shuffled = shuffle(symbols.concat(symbols.slice()));
 
