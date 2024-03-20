@@ -202,8 +202,13 @@ main {
 }
 
 .tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     border-radius: 3px;
     text-align: center;
+    padding: .5em;
 
     background-color: var(--secondary-color-light);
 }
