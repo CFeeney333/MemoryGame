@@ -355,3 +355,6 @@ h3 {
 .black {
     background-color: black;
 }
+.hidden {
+    opacity: 0;
+}
