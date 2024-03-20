@@ -1,10 +1,25 @@
-const symbols = document.querySelectorAll('.symbol');
+const gameBoard = document.getElementById('game-board');
 
-for (let s of symbols) {
-    s.addEventListener('click', (e) => {
-        e.target.classList.toggle('hidden');
-    });
-}
+const createBoard = () => {
+    for (let i = 0; i < 4; i++) {
+        for (let j = 0; j < 4; j++) {
+            const tile = document.createElement('div');
+            tile.classList.add('tile');
+
+            const symbol = document.createElement('div');
+            symbol.classList.add('symbol');
+            symbol.classList.add('red');
+            hide(symbol);
+
+            symbol.addEventListener('click', (e) => {
+                e.target.classList.toggle('hidden');
+            });
+
+            tile.appendChild(symbol);
+            gameBoard.appendChild(tile);
+        }
+    }
+};
 
 const hide = (e) => {
     if (!e.classList.contains('hidden')) {
@@ -17,3 +32,5 @@ const reveal = (e) => {
         e.classList.remove('hidden');
     }
 }
+
+createBoard();
