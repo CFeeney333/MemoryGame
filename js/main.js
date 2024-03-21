@@ -1,4 +1,7 @@
 const gameBoard = document.getElementById('game-board');
+const turns = document.getElementById('turns-value');
+const pairs = document.getElementById('pairs-value');
+
 let first = null, second = null;
 
 // fade timeout in milliseconds before another tile can be clicked
@@ -29,6 +32,8 @@ const createBoard = () => {
                     first = e.target;
                     show(first);
                 } else if (second === null && e.target !== first) {
+                    turns.textContent = String(parseInt(turns.textContent) + 1);
+
                     second = e.target;
                     show(second);
 
@@ -39,6 +44,8 @@ const createBoard = () => {
                             hide(pair[0]);
                             hide(pair[1]);
                         }, FADE_TIMEOUT);
+                    } else {
+                        pairs.textContent = String(parseInt(pairs.textContent) + 1);
                     }
                     setTimeout(() => {
                         first = null;
@@ -82,6 +89,11 @@ const show = (e) => {
     if (e.classList.contains('hidden')) {
         e.classList.remove('hidden');
     }
+}
+
+const resetStats = () => {
+    pairs.textContent = "0";
+    turns.textContent = "0";
 }
 
 createBoard();
