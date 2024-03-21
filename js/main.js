@@ -21,8 +21,8 @@ const createBoard = () => {
                 if (first === null) {
                     first = e.target;
                     show(first);
-                } else if (second === null) {
-                    second = e.target
+                } else if (second === null && e.target !== first) {
+                    second = e.target;
                     show(second);
                     setTimeout(() => {
                         hide(first);
