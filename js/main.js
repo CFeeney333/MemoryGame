@@ -18,7 +18,6 @@ const createBoard = () => {
             const symbol = shuffled.pop();
             symbolElem.classList.add(symbol);
             symbolElem.dataset.symbol = symbol;
-            symbolElem.data
             hide(symbolElem);
 
             symbolElem.addEventListener('click', (e) => {
