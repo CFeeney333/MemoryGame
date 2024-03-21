@@ -7,15 +7,16 @@ const createBoard = () => {
     const symbols = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'white', 'black'];
     const shuffled = shuffle(symbols.concat(symbols.slice()));
 
+    let tileElem, symbolElem, symbol;
     for (let i = 0; i < 4; i++) {
         for (let j = 0; j < 4; j++) {
-            const tileElem = document.createElement('div');
+            tileElem = document.createElement('div');
             tileElem.classList.add('tile');
 
-            const symbolElem = document.createElement('div');
+            symbolElem = document.createElement('div');
             symbolElem.classList.add('symbol');
 
-            const symbol = shuffled.pop();
+            symbol = shuffled.pop();
             symbolElem.classList.add(symbol);
             symbolElem.dataset.symbol = symbol;
             hide(symbolElem);
