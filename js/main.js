@@ -9,15 +9,17 @@ const createBoard = () => {
 
     for (let i = 0; i < 4; i++) {
         for (let j = 0; j < 4; j++) {
-            const tile = document.createElement('div');
-            tile.classList.add('tile');
+            const tileElem = document.createElement('div');
+            tileElem.classList.add('tile');
 
-            const symbol = document.createElement('div');
-            symbol.classList.add('symbol');
-            symbol.classList.add(shuffled.pop());
-            hide(symbol);
+            const symbolElem = document.createElement('div');
+            symbolElem.classList.add('symbol');
 
-            symbol.addEventListener('click', (e) => {
+            symbolElem.classList.add(shuffled.pop());
+            symbolElem.data
+            hide(symbolElem);
+
+            symbolElem.addEventListener('click', (e) => {
                 if (first === null) {
                     first = e.target;
                     show(first);
@@ -33,8 +35,8 @@ const createBoard = () => {
                 }
             });
 
-            tile.appendChild(symbol);
-            gameBoard.appendChild(tile);
+            tileElem.appendChild(symbolElem);
+            gameBoard.appendChild(tileElem);
         }
     }
 };
