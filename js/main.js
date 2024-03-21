@@ -1,6 +1,9 @@
 const gameBoard = document.getElementById('game-board');
 let first = null, second = null;
 
+// fade timeout in milliseconds before another tile can be clicked
+const FADE_TIMEOUT = 800;
+
 const createBoard = () => {
     first = null;
     second = null;
@@ -28,12 +31,19 @@ const createBoard = () => {
                 } else if (second === null && e.target !== first) {
                     second = e.target;
                     show(second);
+
+                    if (first.dataset.symbol !== second.dataset.symbol) {
+                        // retain the elements
+                        const pair = [first, second];
+                        setTimeout(() => {
+                            hide(pair[0]);
+                            hide(pair[1]);
+                        }, FADE_TIMEOUT);
+                    }
                     setTimeout(() => {
-                        hide(first);
-                        hide(second);
                         first = null;
                         second = null;
-                    }, 1200);
+                    }, FADE_TIMEOUT);
                 }
             });
 
