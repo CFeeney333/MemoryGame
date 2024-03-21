@@ -25,6 +25,10 @@ const createBoard = () => {
             symbol = shuffled.pop();
             symbolElem.classList.add(symbol);
             symbolElem.dataset.symbol = symbol;
+
+            // keeps track of whether the element is matched or not, so it doesn't flip back after being selected
+            // again with a mismatched element
+            symbolElem.dataset.matched = "0";
             hide(symbolElem);
 
             symbolElem.addEventListener('click', (e) => {
@@ -45,7 +49,6 @@ const createBoard = () => {
                     show(second);
 
                     if (first.dataset.symbol !== second.dataset.symbol) {
-                        // retain the elements
                         // if they are not a match
                         // retain a reference to the elements, so they can be hidden after the timeout
                         const pair = [first, second];
@@ -55,6 +58,8 @@ const createBoard = () => {
                         }, FADE_TIMEOUT);
                     } else {
                         // they are a match
+                        first.dataset.matched = "1";
+                        second.dataset.matched = "1";
                         pairs.textContent = String(parseInt(pairs.textContent) + 1);
                     }
                     // reset the first and the second
