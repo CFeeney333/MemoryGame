@@ -1,6 +1,15 @@
 const gameBoard = document.getElementById('game-board');
 const turns = document.getElementById('turns-value');
 const pairs = document.getElementById('pairs-value');
+const symbolElements = [];
+
+const revealButton = document.getElementById('reveal');
+revealButton.addEventListener('click', (e) => {
+    for (let symbol of symbolElements) {
+        show(symbol);
+        symbol.dataset.matched = "1";
+    }
+})
 
 let first = null, second = null;
 
@@ -72,6 +81,7 @@ const createBoard = () => {
 
             tileElem.appendChild(symbolElem);
             gameBoard.appendChild(tileElem);
+            symbolElements.push(symbolElem);
         }
     }
 };
