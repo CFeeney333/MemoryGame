@@ -15,7 +15,9 @@ const createBoard = () => {
             const symbolElem = document.createElement('div');
             symbolElem.classList.add('symbol');
 
-            symbolElem.classList.add(shuffled.pop());
+            const symbol = shuffled.pop();
+            symbolElem.classList.add(symbol);
+            symbolElem.dataset.symbol = symbol;
             symbolElem.data
             hide(symbolElem);
 
