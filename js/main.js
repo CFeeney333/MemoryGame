@@ -1,6 +1,7 @@
 const gameBoard = document.getElementById('game-board');
 const turns = document.getElementById('turns-value');
 const pairs = document.getElementById('pairs-value');
+const best = document.getElementById('best-value');
 const symbolElements = [];
 
 const revealButton = document.getElementById('reveal');
@@ -88,6 +89,11 @@ const createBoard = () => {
                 if (finished) {
                     // the game is finished
                     displayFinished();
+                    const turnsValue = parseInt(turns.textContent);
+                    const bestValue = parseInt(best.textContent);
+                    if (turnsValue < bestValue || bestValue === 0) {
+                        best.textContent = String(turnsValue);
+                    }
                 }
             });
 
