@@ -10,7 +10,15 @@ revealButton.addEventListener('click', (e) => {
         show(symbol);
         symbol.dataset.matched = "1";
     }
-})
+});
+
+const newGameButton = document.getElementById('new-game');
+newGameButton.addEventListener('click', (e) => {
+    gameBoard.innerHTML = "";
+    createBoard();
+    pairs.textContent = "0";
+    turns.textContent = "0";
+});
 
 let first = null, second = null;
 
