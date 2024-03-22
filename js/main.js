@@ -77,6 +77,18 @@ const createBoard = () => {
                         second = null;
                     }, FADE_TIMEOUT);
                 }
+
+                let finished = true;
+                for (let s of symbolElements) {
+                    if (s.dataset.matched === "0") {
+                        finished = false;
+                        break;
+                    }
+                }
+                if (finished) {
+                    // the game is finished
+                    displayFinished();
+                }
             });
 
             tileElem.appendChild(symbolElem);
@@ -84,6 +96,10 @@ const createBoard = () => {
             symbolElements.push(symbolElem);
         }
     }
+};
+
+const displayFinished = () => {
+    console.log("Game over!");
 };
 
 const shuffle = (array) => {
