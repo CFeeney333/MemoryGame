@@ -283,7 +283,7 @@ main {
     padding: .5em;
 }
 
-button {
+button, #submit-button {
     flex: 1 1 0;
     font-size: var(--fs-small);
     font-weight: bold;
@@ -297,7 +297,7 @@ button {
     border: 2px solid var(--complementary-color-dark);
 }
 
-#new-game {
+#new-game, #submit-button {
     background-color: var(--secondary-color-light);
     border: 2px solid var(--secondary-color-dark);
 }
@@ -363,4 +363,42 @@ h3 {
 
 .hidden {
     opacity: 0;
+}
+
+
+form {
+    position: absolute;
+    width: 100%;
+    background-color: var(--primary-color-light);
+    opacity: .95;
+    height: 12em;
+    font-size: var(--fs-large);
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: black 0 0 2em -1em;
+}
+
+#form-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    font-size: var(--fs-med);
+    font-weight: normal;
+}
+
+#name {
+    height: 2em;
+}
+
+#submit-button {
+    padding: .2em;
+    margin: .2em;
+    font-size: var(--fs-small);
+    font-weight: normal;
 }
