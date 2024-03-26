@@ -402,3 +402,20 @@ form {
     font-size: var(--fs-small);
     font-weight: normal;
 }
+
+#player-container {
+    position: absolute;
+    top: 6em;
+    display: flex;
+    gap: .8em;
+}
+
+#player-title {
+    font-size: var(--fs-large);
+    font-weight: bold;
+}
+
+#player-name {
+    font-size: var(--fs-large);
+    font-weight: normal;
+}
