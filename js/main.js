@@ -3,6 +3,15 @@ const turns = document.getElementById('turns-value');
 const pairs = document.getElementById('pairs-value');
 const best = document.getElementById('best-value');
 const symbolElements = [];
+const form = document.querySelector('form');
+const nameElem = document.querySelector('#name');
+
+const playerNameElem = document.getElementById('player-name');
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    playerNameElem.textContent = nameElem.value;
+    form.style.display = 'none';
+});
 
 const revealButton = document.getElementById('reveal');
 revealButton.addEventListener('click', (e) => {
