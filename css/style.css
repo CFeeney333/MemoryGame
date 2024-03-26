@@ -371,7 +371,7 @@ form {
     width: 100%;
     background-color: var(--primary-color-light);
     opacity: .95;
-    height: 12em;
+    height: 16em;
     font-size: var(--fs-large);
     font-weight: bold;
 
