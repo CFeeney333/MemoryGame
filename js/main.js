@@ -9,7 +9,7 @@ const nameElem = document.querySelector('#name');
 const playerNameElem = document.getElementById('player-name');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    playerNameElem.textContent = nameElem.value;
+    playerNameElem.textContent = nameElem.value.toUpperCase();
     form.style.display = 'none';
 });
 
