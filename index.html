@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Memory Game</title>
+    <link href="css/reset.css" rel="stylesheet">
     <link href="css/lightgallery-bundle.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link href="css/style.css" rel="stylesheet">
     <script src="https://jsuites.net/v5/jsuites.js"></script>
     <link href="https://jsuites.net/v5/jsuites.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -18,7 +18,7 @@
     <form id="modal">
         <fieldset>
             <legend>Leave a review</legend>
-            <div>
+            <div id="main-form">
                 <label for="username">Username:</label>
                 <input autofocus id="username" name="username" required type="text">
 
@@ -49,25 +49,42 @@
         </fieldset>
     </form>
 
-    <button><a href="memorygame.html">Play!</a></button>
+    <button id="play-button"><a href="memorygame.html">Play!</a></button>
 
-    <h2>Description</h2>
-    <p>This is the description</p>
-    <button>Read More</button>
+    <div id="description">
+        <h2>Description</h2>
+        <p>Memory Game is a simple but fun game, which by playing it can help improve your memory. The aim of the game
+            is to have matched all the pairs in the fewest amount of moves possible. You make a match by clicking on one
+            of the empty cells to reveal what's underneath, then selecting another cell that has the same color. It's
+            unlikely that your first move will be a match, so the cards will turn back around and allow you to make
+            another selection. Try to remember which colour the circles were that you picked before, as you will need to
+            match them later!
+        </p>
+        <p>You can click the reveal button to reveal the rest of the board that hasn't yet been matched. You can press
+            new game in order to start again.</p>
+<!--        <button>Read More</button>-->
+    </div>
 
-    <h2>Gallery</h2>
-    <div id="gallery"></div>
+    <div id="gallery-container">
+        <h2>Gallery</h2>
+        <div id="gallery"></div>
+    </div>
 
-    <h2>Reviews</h2>
-    <input class='plain' id="btn" type='button' value='Add a Review'>
-    <div id="reviews"></div>
+    <div id="reviews-container">
+        <h2>Reviews</h2>
+        <input class='plain' id="btn" type='button' value='Add a Review'>
+        <div id="reviews"></div>
+    </div>
 
     <script id="review" type="text/x-handlebars-template">
-        {{#each this}}
-            <h3>{{username}} reviewed on: {{date}}</h3>
-            <p>{{{content}}}</p>
-            <p>{{rating}}</p>
-        {{/each}}
+        <div id="review-item">
+            {{#each this}}
+                <h3><span id="review-username">{{username}}</span> reviewed on: <span
+                        id="review-date"> {{date}}</span></h3>
+                <p>{{{content}}}</p>
+                <p>{{rating}}/5 stars</p>
+            {{/each}}
+        </div>
     </script>
 
     <script id="images" type="text/x-handlebars-template">
@@ -79,7 +96,7 @@
     </script>
 </main>
 <footer>
-<p>&copy; Cathal Feeney 2024</p>
+    <p>&copy; Cathal Feeney 2024</p>
 </footer>
 
 <!-- SCRIPTS -->

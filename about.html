@@ -3,15 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>About</title>
-    <link rel="stylesheet" href="css/before-effect-slider.css">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/before-effect-slider.css" rel="stylesheet">
+    <link href="css/about.css" rel="stylesheet">
 </head>
 <body>
-<a href="index.html">Home</a>
-<h2>This is a before and after of the project, with screenshots taken during development</h2>
-<div id="images"></div>
+<a href="index.html">Back</a>
 
-<p>more handlebars stuff here</p>
-<p>Author of website and where it's located</p>
+<section>
+    <h2>About</h2>
+    <p>This project was created as part 1 of the Website Development Module project in the Software Systems Development
+        Course in SETU Waterford
+    </p>
+</section>
+
+<section>
+    <h2>Developers</h2>
+    <ul>
+        <li>Cathal Feeney - Student @ SETU Waterford</li>
+    </ul>
+</section>
+
+<div id="b-and-a">
+    <h2>Before and After</h2>
+    <p>This is a before and after of the project, with screenshots taken during development</p>
+    <div id="images"></div>
+</div>
+
+<section>
+    <h2>Links</h2>
+    <a href="https://memory-game-assignment.netlify.app" target="_blank">Netlify</a>
+</section>
 
 <script src="js/before-effect-slider.js"></script>
 <script>
@@ -19,10 +41,10 @@
         Selector: "#images",
         BeforeImage: "images/before.png", // Before Image
         AfterImage: "images/after.png", // After Image
-        DragFrom:70, // Percent % of before Image
-        ButtonsText:{ //After Before Buttons Texts
-            after:'After',
-            before:'Before'
+        DragFrom: 70, // Percent % of before Image
+        ButtonsText: { //After Before Buttons Texts
+            after: 'After',
+            before: 'Before'
         },
     });
 </script>
