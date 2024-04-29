@@ -1,0 +1,50 @@
+:root {
+    --primary-color: hsl(81, 90%, 16%);
+    --secondary-color: hsl(346, 32%, 31%);
+    --secondary-color-light: hsl(8, 22%, 65%);
+
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    --fs-large: 2em;
+    --fs-medium: 1.5em;
+    --fs-small: 1.2em;
+    --fs-tiny: .75em;
+
+    background-color: white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+    gap: 3em;
+}
+
+a {
+    font-size: var(--fs-medium);
+    text-decoration: none;
+    margin-top: 2em;
+    padding: .5em 1em;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-size: var(--fs-large);
+}
+
+#images {
+    flex: 1 1 0;
+}
+
+#b-and-a {
+    width: 90%;
+}
